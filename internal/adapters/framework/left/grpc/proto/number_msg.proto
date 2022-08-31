@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "./pb";
+// from the grpc folder run: protoc --go-grpc_out=./ --proto_path=proto/ proto/arithmetic_service.proto
+// from the grpc folder run: protoc --go_out=./ --proto_path=proto/ proto/number_msg.proto
+message Answer {
+  int32 value = 1;
+}
+
+message OperationParameters {
+  int32 a = 1;
+  int32 b = 22;
+}
